@@ -1,0 +1,1 @@
+<table><tr><th>Id</th><th>Topic name</th><th></th></tr><tr ng-repeat="topic in topicCtrl.topics"><td>{{ topic.id }}</td><td>{{ topic.name }}</td><td><a href="" ng-click="topicCtrl.onDeleteTopic(topic)">DELETE</a></td></tr></table><form ng-submit="topicCtrl.onCreateTopic()"><input ng-model="topicCtrl.topicName"/><input type="submit" value="Add topic"/></form>
