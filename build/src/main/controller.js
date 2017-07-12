@@ -1,9 +1,9 @@
 (function() {
   var AppController, dependencies;
 
-  dependencies = ['Topic'];
+  dependencies = [];
 
-  AppController = function(Topic) {
+  AppController = function() {
     var vm;
     vm = this;
     return vm;

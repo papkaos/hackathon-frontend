@@ -1,33 +1,50 @@
 doctype html
 html(lang="en", ng-app="main")
-    head
-        meta(charset="UTF-8")
-        title Simple Date Picker
-        link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic")
-        //link(rel="stylesheet", href="date-picker/date-picker.css")
-        link(rel="stylesheet", href="assets/app.css")
-    body(ng-controller="AppController as appCtrl")
-        div.container-wrapper
-            div(hack-toolbar)
-                a(href="#") LOG OUT
-            div(hack-nav)
-                a(ui-sref='topics') TOPICS
+  head
+    meta(charset="UTF-8")
+    title Simple Date Picker
+    link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic")
+    //link(rel="stylesheet", href="date-picker/date-picker.css")
+    link(rel="stylesheet", href="assets/app.css")
+  body(ng-controller="AppController as appCtrl")
+    div.container-wrapper
+      div(hack-toolbar)
+        a(href="#") LOG OUT
+      div(hack-nav)
+        a(ui-sref='main.private.topics' ui-sref-active='active') TOPICS
+        a(ui-sref='main.private.speakers' ui-sref-active='active') SPEAKERS
 
-            ui-view
+      ui-view
 
 
-        script(src="libs/lodash/lodash.js")
-        script(src="libs/angular/angular.js")
-        script(src="libs/angular-ui-router/release/angular-ui-router.js")
-        script(src="libs/angularjs-rails-resource/angularjs-rails-resource.js")
-        //script(src="date-picker/date-picker.js")
-        //script(src="date-picker/date-picker.directive.js")
-        //script(src="date-picker/date-picker.controller.js")
-        //script(src="date-picker/date-picker.service.js")
-        script(src="src/_shared/module.js")
-        script(src="src/_shared/config/default.js")
-        script(src="src/_shared/resources/app-model.js")
-        script(src="src/main/router.js")
-        script(src="src/_data/topic/model.js")
-        script(src="src/main/controller.js")
-        script(src="src/private/topics/controller.js")
+    script(src="libs/lodash/lodash.js")
+    script(src="libs/angular/angular.js")
+    script(src="libs/angular-ui-router/release/angular-ui-router.js")
+    script(src="libs/angularjs-rails-resource/angularjs-rails-resource.js")
+    //script(src="date-picker/date-picker.js")
+    //script(src="date-picker/date-picker.directive.js")
+    //script(src="date-picker/date-picker.controller.js")
+    //script(src="date-picker/date-picker.service.js")
+    script(src="src/_shared/module.js")
+    script(src="src/_shared/config/default.js")
+    script(src="src/_shared/resources/app-model.js")
+
+    script(src="src/main/router.js")
+    script(src="src/main/controller.js")
+    script(src="src/_data/topic/model.js")
+    script(src="src/_data/speaker/model.js")
+
+    script(src="src/private/router.js")
+    script(src="src/private/controller.js")
+
+    //script(src="src/_data/topic/model.js")
+    script(src="src/private/topic/router.js")
+
+    script(src="src/private/topic/form/controller.js")
+    script(src="src/private/topic/list/controller.js")
+    //script(src="src/private/topic/controller.js")
+
+    script(src="src/private/speaker/router.js")
+
+    script(src="src/private/speaker/form/controller.js")
+    script(src="src/private/speaker/list/controller.js")

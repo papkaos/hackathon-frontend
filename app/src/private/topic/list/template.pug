@@ -1,0 +1,19 @@
+h3 Topics
+table
+  tr
+    th Id
+    th Topic name
+    th
+  tr(ng-repeat="topic in topicsCtrl.topics")
+    td {{ topic.id }}
+    td {{ topic.name }}
+    td
+      a(href="" ng-click="topicsCtrl.onDeleteTopic(topic)") DELETE
+      span  |
+      a(ui-sref="main.private.topic-edit({id: topic.id})") EDIT
+br
+br
+a.action-button(ui-sref="main.private.topic-add") NEW
+//form(ng-submit="topicsCtrl.onCreateTopic()")
+//  input(ng-model="topicsCtrl.topicName")
+//  input(type="submit" value="Add topic")

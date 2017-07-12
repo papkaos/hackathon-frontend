@@ -1,0 +1,3 @@
+form(name="TopicForm" ng-submit="topicFormCtrl.onCreateTopic(TopicForm.$valid)" novalidate="")
+  input(ng-model="topicFormCtrl.topic.name" ng-required="true")
+  input(type="submit" value="Save")

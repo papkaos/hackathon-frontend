@@ -1,21 +1,10 @@
-dependencies = ['Topic']
+dependencies = []
 
-AppController = (Topic) ->
+AppController = () ->
+
   vm = this
 
-#  vm.topicName = ''
-#
-#  vm.topics = []
-#
-#  Topic.query().then (topics) ->
-#    vm.topics = topics
-#
-#  vm.onCreateTopic = ->
-#    console.log(vm.topicName)
-#    vm.topicName = ''
-#
-#  vm.onDeleteTopic = (topic) ->
-#    topic.delete()
+  # global
 
   return vm
 

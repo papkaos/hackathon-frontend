@@ -1,0 +1,16 @@
+h3 Speakers
+table
+  tr
+    th Id
+    th Speaker name
+    th
+  tr(ng-repeat="speaker in speakersCtrl.speakers")
+    td {{ speaker.id }}
+    td {{ speaker.name }}
+    td
+      a(href="" ng-click="speakersCtrl.onDeleteSpeaker(speaker)") DELETE
+      span  |
+      a(ui-sref="main.private.speaker-edit({id: speaker.id})") EDIT
+br
+br
+a.action-button(ui-sref="main.private.speaker-add") NEW

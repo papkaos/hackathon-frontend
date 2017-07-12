@@ -6,11 +6,6 @@ body {
 .container-wrapper {
   margin: 0 auto;
   padding: 0px;
-  //width: 960px;
-
-  //.users-date {
-  //  float: right;
-  //}
 }
 
 [hack-toolbar] {
@@ -39,6 +34,11 @@ body {
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
+
+    &.active {
+      background: #00BCD4;
+      color: #FFF;
+    }
   }
 }
 
@@ -49,4 +49,14 @@ table {
 
 table, th, td {
   border: 1px solid black;
+}
+
+a.action-button {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  color: #212121;
+  background-color: #fafafa;
+  padding: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
 }

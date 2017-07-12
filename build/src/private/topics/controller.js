@@ -1,9 +1,9 @@
 (function() {
-  var TopicController, dependencies;
+  var TopicsController, dependencies;
 
   dependencies = ['Topic'];
 
-  TopicController = function(Topic) {
+  TopicsController = function(Topic) {
     var vm;
     vm = this;
     vm.topicName = '';
@@ -24,6 +24,6 @@
     return vm;
   };
 
-  angular.module('main').controller('TopicController', dependencies.concat(TopicController));
+  angular.module('private').controller('TopicsController', dependencies.concat(TopicsController));
 
 }).call(this);

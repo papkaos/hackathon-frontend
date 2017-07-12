@@ -1,0 +1,3 @@
+form(name="SpeakerForm" ng-submit="speakerFormCtrl.onCreateSpeaker(SpeakerForm.$valid)" novalidate="")
+  input(ng-model="speakerFormCtrl.speaker.fullname" ng-required="true")
+  input(type="submit" value="Save")
