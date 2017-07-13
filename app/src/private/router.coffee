@@ -2,6 +2,7 @@ angular.module('private', [
   'ui.router'
   'private.topic'
   'private.speaker'
+  'private.hackathon'
 ]).config ['$stateProvider', ($stateProvider) ->
 
   $stateProvider

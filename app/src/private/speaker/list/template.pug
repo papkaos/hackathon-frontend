@@ -1,12 +1,10 @@
 h3 Speakers
 table
   tr
-    th Id
     th Speaker name
     th
   tr(ng-repeat="speaker in speakersCtrl.speakers")
-    td {{ speaker.id }}
-    td {{ speaker.name }}
+    td {{ speaker.fullname }}
     td
       a(href="" ng-click="speakersCtrl.onDeleteSpeaker(speaker)") DELETE
       span  |

@@ -12,9 +12,9 @@
         return vm.speaker = speaker;
       });
     } else {
-      vm.speaker = new Topic();
+      vm.speaker = new Speaker();
     }
-    vm.onCreateTopic = function(isValid) {
+    vm.onCreateSpeaker = function(isValid) {
       if (isValid) {
         return vm.speaker.save().then(function() {
           return $state.go('main.private.speakers');

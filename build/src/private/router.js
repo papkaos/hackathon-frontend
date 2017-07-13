@@ -1,5 +1,5 @@
 (function() {
-  angular.module('private', ['ui.router', 'private.topic', 'private.speaker']).config([
+  angular.module('private', ['ui.router', 'private.topic', 'private.speaker', 'private.hackathon']).config([
     '$stateProvider', function($stateProvider) {
       return $stateProvider.state('main.private', {
         url: '/private',

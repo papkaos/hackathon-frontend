@@ -1,0 +1,20 @@
+h3 Hackathons
+table
+  tr
+    th Hackathon name
+    th Topic Name
+    th Date
+    th Speaker
+    th
+  tr(ng-repeat="hackathon in hackathonsCtrl.hackathons")
+    td {{ hackathon.name }}
+    td {{ hackathon.topic.name }}
+    td {{ hackathon.holdDate }}
+    td {{ hackathon.speaker.fullname }}
+    td
+      a(href="" ng-click="hackathonsCtrl.onDeleteHackathon(hackathon)") DELETE
+      span  |
+      a(ui-sref="main.private.hackathon-edit({id: hackathon.id})") EDIT
+br
+br
+a.action-button(ui-sref="main.private.hackathon-add") NEW

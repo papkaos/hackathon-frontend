@@ -11,6 +11,7 @@ html(lang="en", ng-app="main")
       div(hack-toolbar)
         a(href="#") LOG OUT
       div(hack-nav)
+        a(ui-sref='main.private.hackathons' ui-sref-active='active') HACKATHONS
         a(ui-sref='main.private.topics' ui-sref-active='active') TOPICS
         a(ui-sref='main.private.speakers' ui-sref-active='active') SPEAKERS
 
@@ -33,6 +34,7 @@ html(lang="en", ng-app="main")
     script(src="src/main/controller.js")
     script(src="src/_data/topic/model.js")
     script(src="src/_data/speaker/model.js")
+    script(src="src/_data/hackathon/model.js")
 
     script(src="src/private/router.js")
     script(src="src/private/controller.js")
@@ -48,3 +50,8 @@ html(lang="en", ng-app="main")
 
     script(src="src/private/speaker/form/controller.js")
     script(src="src/private/speaker/list/controller.js")
+
+    script(src="src/private/hackathon/router.js")
+
+    script(src="src/private/hackathon/form/controller.js")
+    script(src="src/private/hackathon/list/controller.js")

@@ -1,18 +1,18 @@
 (function() {
-  var TopicsController, dependencies;
+  var SpeakersController, dependencies;
 
-  dependencies = ['Topic', '$state'];
+  dependencies = ['Speaker', '$state'];
 
-  TopicsController = function(Topic, $state) {
+  SpeakersController = function(Speaker, $state) {
     var vm;
     vm = this;
-    vm.topics = [];
-    Topic.query().then(function(topics) {
-      return vm.topics = topics;
+    vm.speakers = [];
+    Speaker.query().then(function(speakers) {
+      return vm.speakers = speakers;
     });
-    vm.onDeleteTopic = function(topic) {
+    vm.onDeleteSpeaker = function(speaker) {
       if (confirm('Sure?')) {
-        return topic["delete"]().then(function() {
+        return speaker["delete"]().then(function() {
           return $state.reload();
         });
       }
@@ -20,6 +20,6 @@
     return vm;
   };
 
-  angular.module('private.topic').controller('TopicsController', dependencies.concat(TopicsController));
+  angular.module('private.speaker').controller('SpeakersController', dependencies.concat(SpeakersController));
 
 }).call(this);

@@ -1,3 +1,16 @@
 form(name="SpeakerForm" ng-submit="speakerFormCtrl.onCreateSpeaker(SpeakerForm.$valid)" novalidate="")
-  input(ng-model="speakerFormCtrl.speaker.fullname" ng-required="true")
+  input(ng-model="speakerFormCtrl.speaker.fullname" placeholder="Full name" ng-required="true")
+  br
+  br
+  input(ng-model="speakerFormCtrl.speaker.email" placeholder="Email" ng-required="true")
+  br
+  br
+  input(ng-model="speakerFormCtrl.speaker.password" placeholder="Password" ng-required="true" type="password")
+  br
+  br
+  label
+    input(type="checkbox" ng-model="speakerFormCtrl.speaker.isAdmin")
+    span Is admin
+  br
+  br
   input(type="submit" value="Save")
