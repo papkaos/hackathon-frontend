@@ -9,6 +9,7 @@
     vm.hackathon = {};
     vm.topics = [];
     vm.speakers = [];
+    vm.selectValue = 16;
     init = function() {
       if ($stateParams.id) {
         Hackathon.get($stateParams.id).then(function(hackathon) {

@@ -1,7 +1,7 @@
 (function() {
   var Config, dependencies;
 
-  angular.module('main', ['shared', 'private', 'ui.router']);
+  angular.module('main', ['shared', 'private', 'ui.router', 'ui-components']);
 
   dependencies = ['$stateProvider', '$urlRouterProvider'];
 

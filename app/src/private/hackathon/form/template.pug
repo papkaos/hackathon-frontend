@@ -5,14 +5,26 @@ form(name="HackathonForm" ng-submit="hackathonFormCtrl.onCreateHackathon(Hackath
   input(ng-model="hackathonFormCtrl.hackathon.holdDate" placeholder="Date" ng-required="true")
   br
   br
-  select(ng-model="hackathonFormCtrl.hackathon.topicId")
-    option(value="") ---Select topic---
-    option(ng-repeat="topic in hackathonFormCtrl.topics" value="{{ topic.id }}") {{ topic.name }}
+  hack-select(
+    select-value="hackathonFormCtrl.hackathon.topicId"
+    select-options="hackathonFormCtrl.topics"
+    select-key-field="id"
+    select-text-field="name"
+  )
+  //select(ng-model="hackathonFormCtrl.hackathon.topicId")
+  //  option(value="") ---Select topic---
+  //  option(ng-repeat="topic in hackathonFormCtrl.topics" value="{{ topic.id }}") {{ topic.name }}
   br
   br
-  select(ng-model="hackathonFormCtrl.hackathon.speakerId")
-    option(value="") ---Select speaker---
-    option(ng-repeat="speaker in hackathonFormCtrl.speakers" value="{{ speaker.id }}") {{ speaker.fullname }}
+  hack-select(
+    select-value="hackathonFormCtrl.hackathon.speakerId"
+    select-options="hackathonFormCtrl.speakers"
+    select-key-field="id"
+    select-text-field="fullname"
+  )
+  //select(ng-model="hackathonFormCtrl.hackathon.speakerId")
+  //  option(value="") ---Select speaker---
+  //  option(ng-repeat="speaker in hackathonFormCtrl.speakers" value="{{ speaker.id }}") {{ speaker.fullname }}
   br
   br
   input(type="submit" value="Save")

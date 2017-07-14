@@ -1,0 +1,8 @@
+div.select-wrapper(on-body-click="selectCtrl.closeSelect()")
+  div.select-head(ng-click="selectCtrl.toggleSelect()")
+    span {{ selectCtrl.selectedValue }}
+    span.arrow(ng-if="selectCtrl.isHidden") ⯆
+    span.arrow(ng-if="!selectCtrl.isHidden") ⯅
+  div.select-list(ng-class="{'hidden': selectCtrl.isHidden}")
+    ul
+      li(ng-repeat="item in selectCtrl.valuesList" ng-click="selectCtrl.onSelectValue(item)") {{ item.text }}

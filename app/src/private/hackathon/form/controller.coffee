@@ -8,6 +8,8 @@ HackathonFormController = (Hackathon, Topic, Speaker, $state, $stateParams) ->
   vm.topics = []
   vm.speakers = []
 
+  vm.selectValue = 16
+
   init = ->
     if $stateParams.id
       Hackathon.get($stateParams.id).then((hackathon) ->

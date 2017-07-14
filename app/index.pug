@@ -5,6 +5,7 @@ html(lang="en", ng-app="main")
     title Simple Date Picker
     link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic")
     //link(rel="stylesheet", href="date-picker/date-picker.css")
+    link(rel="stylesheet", href="src/components/select/assets/select.css")
     link(rel="stylesheet", href="assets/app.css")
   body(ng-controller="AppController as appCtrl")
     div.container-wrapper
@@ -22,10 +23,6 @@ html(lang="en", ng-app="main")
     script(src="libs/angular/angular.js")
     script(src="libs/angular-ui-router/release/angular-ui-router.js")
     script(src="libs/angularjs-rails-resource/angularjs-rails-resource.js")
-    //script(src="date-picker/date-picker.js")
-    //script(src="date-picker/date-picker.directive.js")
-    //script(src="date-picker/date-picker.controller.js")
-    //script(src="date-picker/date-picker.service.js")
     script(src="src/_shared/module.js")
     script(src="src/_shared/config/default.js")
     script(src="src/_shared/resources/app-model.js")
@@ -36,15 +33,16 @@ html(lang="en", ng-app="main")
     script(src="src/_data/speaker/model.js")
     script(src="src/_data/hackathon/model.js")
 
+    // directives
+    script(src="src/_shared/directives/on-body-click.js")
+
     script(src="src/private/router.js")
     script(src="src/private/controller.js")
 
-    //script(src="src/_data/topic/model.js")
     script(src="src/private/topic/router.js")
 
     script(src="src/private/topic/form/controller.js")
     script(src="src/private/topic/list/controller.js")
-    //script(src="src/private/topic/controller.js")
 
     script(src="src/private/speaker/router.js")
 
@@ -55,3 +53,8 @@ html(lang="en", ng-app="main")
 
     script(src="src/private/hackathon/form/controller.js")
     script(src="src/private/hackathon/list/controller.js")
+
+    // components
+    script(src="src/components/module.js")
+    script(src="src/components/select/controller.js")
+    script(src="src/components/select/component.js")
